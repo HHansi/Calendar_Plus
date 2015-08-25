@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="UTF-8"?>  
+ 	<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/containerS"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="calendar_plus.CalendarActivity"
+    tools:ignore="MergeRootFrame"
+    android:background="@drawable/background" 
+    android:padding="10dp"
+    android:orientation="vertical" >
+    
+ 	    <TextView
+ 	        android:id="@+id/selected_date"
+ 	        android:layout_width="fill_parent"
+ 	        android:layout_height="wrap_content"
+ 	        android:gravity="center" 
+ 	        android:textStyle="bold"/>
+
+ 	      <ListView
+ 	        android:id="@+id/list_schedule_time"
+ 	        android:layout_width="wrap_content"
+ 	        android:layout_height="wrap_content"
+ 	        
+ 	        android:layout_marginTop="25dp"
+ 	        android:layout_marginBottom="35dp"
+
+ 	        android:layout_alignParentRight="true" >
+ 	    </ListView> 
+ 	    
+
+ 	      <Button 
+ 	          android:id="@+id/btn_enable"
+ 	          android:layout_width="fill_parent"
+ 	          android:layout_height="wrap_content"
+ 	          android:text="Enable"
+ 	          android:layout_alignParentBottom="true"
+ 	          android:visibility="invisible" />
+ 	      <ImageView 
+ 	          android:id="@+id/IV_grid"
+ 	          android:layout_width="wrap_content"
+ 	          android:layout_height="wrap_content"
+ 	          android:layout_alignParentBottom="true"
+ 	          android:layout_alignParentRight="true"
+ 	          android:background="@drawable/grid_icon"
+ 	          android:gravity="center"
+ 	          android:layout_marginRight="30dp"/>
+
+ 	    </RelativeLayout>
+  

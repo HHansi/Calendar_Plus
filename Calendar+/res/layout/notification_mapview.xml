@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".MapView" >
+ 
+     <TextView
+        android:id="@+id/tv_desc"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true" /> 
+        
+     <LinearLayout
+         android:layout_width="fill_parent"
+         android:layout_height="wrap_content"
+         android:orientation="horizontal"
+         android:weightSum="2"  >
+         
+         <TextView
+             android:id="@+id/tv_distance"
+             android:layout_width="wrap_content"
+             android:layout_height="wrap_content"
+             android:layout_gravity="left"
+             android:layout_weight="1" />
+         <TextView
+             android:id="@+id/tv_duration"
+             android:layout_width="wrap_content"
+             android:layout_height="wrap_content"
+             android:gravity="right" 
+             android:layout_weight="1" />
+         </LinearLayout>"
+
+ 
+  	<fragment 
+	    android:id="@+id/map"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        class="com.google.android.gms.maps.SupportMapFragment"
+        />  
+ 
+</LinearLayout>

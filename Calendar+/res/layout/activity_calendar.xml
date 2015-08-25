@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/container"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="calendar_plus.CalendarActivity"
+    tools:ignore="MergeRootFrame"
+    android:background="@drawable/background" >
+    
+    <RelativeLayout
+        
+        android:id="@+id/header"
+        android:background="@drawable/calendar_top"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content" >
+        
+        <RelativeLayout 
+            android:id="@+id/previous"
+            android:layout_width="40dp"
+            android:layout_height="30dp"
+            android:layout_alignParentLeft="true" >
+            
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/IV_previous"
+                android:layout_centerInParent="true"
+                android:background="@drawable/arrow_left" />
+         </RelativeLayout>
+
+        <RelativeLayout 
+            android:id="@+id/next"
+            android:layout_width="40dp"
+            android:layout_height="30dp"
+            android:layout_alignParentRight="true" >
+            
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/IV_next"
+                android:layout_centerInParent="true"
+                android:background="@drawable/arrow_right" />
+         </RelativeLayout>
+        
+        <TextView 
+            android:id="@+id/title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="5dp"
+            android:textSize="18dp"
+            android:textStyle="bold" />
+         </RelativeLayout>
+         
+    <GridView 
+        android:id="@+id/grid"
+        android:layout_below="@id/header"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:numColumns="7"
+        android:stretchMode="columnWidth"
+        android:listSelector="@android:color/transparent" >
+        </GridView>
+        
+    <LinearLayout 
+        android:id="@+id/text"
+        android:layout_below="@id/grid"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+		android:layout_marginLeft="5dp"
+		android:layout_marginRight="5dp"
+		android:orientation="vertical" >       
+        </LinearLayout>
+    
+</RelativeLayout>
+

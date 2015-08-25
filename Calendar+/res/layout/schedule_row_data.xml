@@ -1,0 +1,223 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--  
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:background="@drawable/background"
+    android:layout_width="fill_parent"
+    android:layout_height="wrap_content" 
+    android:padding="15dp"
+    android:orientation="vertical">
+    
+    <ListView
+        android:id="@+id/list_schedule_row"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" />
+    </LinearLayout>
+    -->
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+	android:background="@drawable/background"
+	android:layout_width="match_parent"
+	android:layout_height="match_parent"
+	android:id="@+id/s_r_data_layout">
+	<!-- android:layout_gravity="center" >  -->
+	 
+    
+<ScrollView 
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent" >
+    
+<LinearLayout 
+    android:layout_height="wrap_content" 
+    android:layout_width="wrap_content"
+    android:orientation="vertical"
+    android:padding="3dp">
+    
+    <TextView 
+        android:id="@+id/Subject"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textSize="12dp" 
+        android:text="Subject"/>
+    <View 
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="#0000FF"/>
+    <EditText 
+        android:id="@+id/data_Subject"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"  
+        android:layout_alignParentRight="true"
+        android:textSize="12dp"
+        android:text="" />
+    
+    <TextView 
+        android:id="@+id/Description"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textSize="12dp" 
+        android:text="Description"/>
+    <View 
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="#0000FF"/>
+    <EditText 
+        android:id="@+id/data_Description"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"  
+        android:layout_alignParentRight="true"
+        android:textSize="12dp" />
+
+    <TextView 
+        android:id="@+id/Location"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textSize="12dp" 
+        android:text="Location"/>
+    <View 
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="#0000FF"/>
+    <EditText 
+        android:id="@+id/data_Location"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"  
+        android:layout_alignParentRight="true"
+        android:textSize="12dp"
+        android:text="" />
+    <TextView 
+        android:id="@+id/verify_location"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:gravity="right"
+        android:textColor="#0000FF"
+        android:textSize="12dp"
+        android:text="Verify location"/>" 
+
+    
+    <TextView 
+        android:id="@+id/Date"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textSize="12dp" 
+        android:text="Date"/>
+    <View 
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="#0000FF"/>
+    <EditText 
+        android:id="@+id/data_Date"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"  
+        android:layout_alignParentRight="true"
+        android:textSize="12dp" 
+       	android:clickable="false" 
+        android:cursorVisible="false" 
+        android:focusable="false" 
+        android:focusableInTouchMode="false" />
+    
+    <TextView 
+        android:id="@+id/Time"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textSize="12dp" 
+        android:text="Time"/>
+    <View 
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="#0000FF"/>
+    <EditText 
+        android:id="@+id/data_Time"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"  
+        android:layout_alignParentRight="true"
+        android:textSize="12dp"
+       	android:clickable="false" 
+        android:cursorVisible="false" 
+        android:focusable="false" 
+        android:focusableInTouchMode="false" />
+   
+    <TextView 
+        android:id="@+id/Duration"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textSize="12dp" 
+        android:text="Duration"/>
+    <View 
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="#0000FF"/>
+    <EditText 
+        android:id="@+id/data_Duration"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"  
+        android:layout_alignParentRight="true"
+        android:textSize="12dp"
+       	android:clickable="false" 
+        android:cursorVisible="false" 
+        android:focusable="false" 
+        android:focusableInTouchMode="false"
+        />
+            
+</LinearLayout>
+</ScrollView>
+ 	
+	   <Button
+	    android:id="@+id/event"
+	    android:layout_width="wrap_content"
+	    android:layout_height="wrap_content"
+	    android:text="Event"
+	    android:layout_alignParentBottom="true"
+	    android:visibility="gone"
+	    
+	    />    
+	<Button 
+	    android:id="@+id/btn_view_map"
+	    android:layout_width="wrap_content"
+	    android:layout_height="wrap_content"
+	    android:text="View map"
+	    android:textSize="13dp"
+	    android:textColor="#0000FF"
+	    android:layout_alignParentBottom="true"
+	    android:layout_marginLeft="30dp"
+	    android:visibility="gone"
+	    />
+
+
+	<RelativeLayout
+	     android:layout_alignParentBottom="true"
+	     android:layout_width="wrap_content"
+	     android:layout_height="wrap_content"
+	     android:layout_marginLeft="200dp"
+	     android:layout_marginRight="10dp"
+	     
+	      
+	     android:paddingRight="20dp"
+	     android:paddingLeft="20dp">
+	      
+ 	<ImageView
+		android:id="@+id/save"
+	    android:layout_alignParentBottom="true"
+	    android:layout_alignParentLeft="true"
+	    android:layout_width="wrap_content"
+	    android:layout_height="wrap_content"	    
+	    android:background="@drawable/save_crop" 
+	    android:layout_centerHorizontal="true"/>   
+	
+	    
+	
+	<ImageView
+		android:id="@+id/delete"
+	   android:layout_alignParentBottom="true"
+	    android:layout_alignParentRight="true"
+	    android:layout_width="wrap_content"
+	    android:layout_height="wrap_content"	    
+	    android:background="@drawable/delete_crop" 
+	    android:layout_centerHorizontal="true"/>
+	</RelativeLayout>
+
+</RelativeLayout>
+        
+        
+
+     

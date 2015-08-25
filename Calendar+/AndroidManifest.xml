@@ -1,0 +1,163 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.example.calendar_plus"
+    android:versionCode="1"
+    android:versionName="1.0" 
+>
+
+    <uses-sdk
+        android:minSdkVersion="8"
+        android:targetSdkVersion="19" />
+    
+    <uses-permission android:name="android.permission.READ_CALENDAR" />
+    <uses-permission android:name="android.permission.WRITE_CALENDAR" />
+    
+    <uses-permission android:name="android.permission.INTERNET"/>
+ 
+	<!--  <permission
+          android:name="com.example.calendar_plus.permission.MAPS_RECEIVE"
+          android:protectionLevel="signature" />   -->
+	
+	<uses-permission android:name="com.example.calendar_plus.permission.MAPS_RECEIVE" />
+
+	<uses-permission android:name="android.permission.INTERNET"/>
+        <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE"/>
+        <uses-permission android:name="com.google.android.providers.gsf.permission.READ_GSERVICES"/>
+        <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION"/>
+        <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION"/>
+        
+        <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE"/>
+        
+    <uses-feature
+    	android:glEsVersion="0x00020000"
+        android:required="true"/>
+        
+    <application
+        android:allowBackup="true"
+        android:icon="@drawable/appicon"
+        android:label="@string/app_name"
+        android:theme="@style/AppTheme">
+        <activity
+            android:name="calendar_plus.CalendarActivity"
+            android:label="@string/app_name" >
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        
+        <activity
+            android:name="calendar_plus.Schedule"
+            android:label="@string/app_name" >
+            <intent-filter>
+                <action android:name="com.example.calendar_plus.SCHEDULE" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
+    
+        <activity
+            android:name="calendar_plus.ScheduleManager"
+            android:label="@string/app_name" >
+            <intent-filter>
+                <action android:name="com.example.calendar_plus.SCHEDULEMANAGER" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
+        
+        <activity
+            android:name="calendar_plus.MapView"
+            android:label="@string/app_name" >
+            <intent-filter>
+                <action android:name="com.example.calendar_plus.MAPVIEW" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
+        
+        <activity
+            android:name="calendar_plus.NotificationMapView"
+            android:label="@string/app_name" >
+            <intent-filter>
+                <action android:name="com.example.calendar_plus.NOTIFICATIONMAPVIEW" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
+        
+        <activity
+            android:name="calendar_plus_notification_handler.NotificationGenerator"
+            android:label="@string/app_name" >
+            <intent-filter>
+                <action android:name="com.example.calendar_plus_notification_handler.NOTIFICATIONGENERATOR" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
+        
+ <!--        <activity
+            android:name="com.example.calendar_plus.NotificationSchedule"
+            android:label="@string/app_name" >
+            <intent-filter>
+                <action android:name="com.example.calendar_plus.NOTIFICATIONSCHEDULE" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>   --> 
+        
+        <activity
+            android:name="calendar_plus_notification_handler.NotificationSchedule"
+            android:label="@string/app_name" >
+            <intent-filter>
+                <action android:name="com.example.calendar_plus_notification_handler.NOTIFICATIONSCHEDULE" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
+        
+        <activity
+            android:name="calendar_plus_notification_handler.NotificationMap"
+            android:label="@string/app_name" >
+            <intent-filter>
+                <action android:name="com.example.calendar_plus_notification_handler.NOTIFICATIONMAP" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
+        
+        <activity
+            android:name="android.intent.action.insert"
+            android:label="@string/app_name" >
+            <intent-filter>
+                <action android:name="android.intent.action.INSERT" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity> 
+        
+        
+        
+        
+ 	    <service android:name="calendar_plus.AlarmService"
+                 android:enabled="true" />
+         
+        <receiver android:name="calendar_plus_notification_handler.Receiver"/>
+        <receiver android:name="calendar_plus_notification_handler.EventReceiver"/>
+        
+        <service  android:name="calendar_plus_notification_handler.ArrivalService" 
+            	  android:enabled="true" />
+
+        
+        
+	 	<meta-data android:name="com.google.android.gms.version"
+			android:value="@integer/google_play_services_version" />  
+        
+        <meta-data
+    		android:name="com.google.android.maps.v2.API_KEY"
+    		android:value="AIzaSyAH9zK8eZVyCYmT_3jGsXIuWzElOoJLcmQ"/>
+        
+    </application>
+
+</manifest>
